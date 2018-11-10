@@ -58,6 +58,13 @@ class ViewController: UIViewController {
         //We set the flashcardsController property to self
         creationController.flashcardsController = self
         
+        
+        if segue.identifier == "EditSegue"{
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+        }
+        
+        
     }
 
     @IBAction func didTapOnFlashCard(_ sender: Any) {
@@ -70,9 +77,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateFlashcard(question: String, answer: String) {
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?) {
         frontLabel.text = question
         backLabel.text = answer
+        btnOptionOne.setTitle(extraAnswerOne, for: .normal)
+        BtnOptionTwo.setTitle(answer, for: .normal)
+        BtnOptionThree.setTitle(extraAnswerTwo, for: .normal)
     }
     
     @IBAction func didTapOnBtnOne(_ sender: Any) {
