@@ -27,7 +27,6 @@
 
 ### App Walk-though
 
-<img src="http://recordit.co/RBsT29N0Nf" width=200><br>
 <img src="http://g.recordit.co/mt43Gb579x.gif" width=200><br>
 
 ## Required
